@@ -3,3 +3,4 @@ physpy/target
 */.eggs
 */physpy.egg-info
 *.so
+physpy/examples/results/

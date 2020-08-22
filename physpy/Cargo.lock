@@ -319,11 +319,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "phys"
+version = "0.1.0"
+dependencies = [
+ "ndarray",
+]
+
+[[package]]
 name = "physpy"
 version = "0.1.0"
 dependencies = [
  "ndarray",
  "numpy",
+ "phys",
  "pyo3",
  "rayon",
 ]

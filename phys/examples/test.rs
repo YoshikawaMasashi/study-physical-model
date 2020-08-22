@@ -8,6 +8,6 @@ fn main() {
         0.1,
         (100, 100));
     
-    let ret = fdmrunner.run();
+    let ret = fdmrunner.run(1000);
     println!("test");
 }

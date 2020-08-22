@@ -53,7 +53,7 @@ impl FDMRunner {
                     ) + 2.0 * before[[calc_x, calc_y]] - before_before[[calc_x, calc_y]];
 
                     if calc_x == self.source_pos.0 && calc_y == self.source_pos.1 {
-                        next[[calc_x, calc_y]] += ((time_index as f64) * self.delta_t).cos();
+                        next[[calc_x, calc_y]] += ((time_index as f64) * self.delta_t * 0.3).cos();
                     }
                 }
             }
@@ -62,9 +62,9 @@ impl FDMRunner {
         next
     }
 
-    pub fn run(&self) -> Vec<Array2<f64>> {
+    pub fn run(&self, steps: usize) -> Vec<Array2<f64>> {
         let mut ret = vec![];
-        for time_index in 0..100 {
+        for time_index in 0..steps {
             if time_index == 0 {
                 let next = self.step(Array::zeros(self.size.f()), Array::zeros(self.size.f()), time_index);
                 ret.push(next);
