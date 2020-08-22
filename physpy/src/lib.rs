@@ -1,5 +1,3 @@
-pub mod finite_difference_method;
-
 #[cfg(test)]
 mod tests {
     #[test]

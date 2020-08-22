@@ -1,1 +1,5 @@
 phys/target
+physpy/target
+*/.eggs
+*/physpy.egg-info
+*.so
